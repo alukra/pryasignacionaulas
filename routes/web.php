@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\LandingController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UsuarioController;
+
+
+
+Route::get('/', [LandingController::class, 'index']);
+
+Route::get('/login', [LoginController::class, 'login']);
+Route::post('/authenticate', [LoginController::class, 'authenticate']);
+Route::get('/logout', [LoginController::class, 'logout']);
+
+Route::resource('usuario', UsuarioController::class);
+
