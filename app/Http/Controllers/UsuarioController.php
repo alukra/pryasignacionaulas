@@ -41,16 +41,30 @@ class UsuarioController extends Controller{
         return redirect('usuario');
     }
     
-    public function show($id){
-        return view('user.usuarioEdit', ['usuarios' => Usuario::findOrFail($id) ]);
-    }
-
     public function edit($id){
-
+        return view('main.usuarioEdit', [
+            'usuario' => Usuario::findOrFail($id),
+            'roles' => RolUsuario::get()
+        ]);
     }
 
     public function update(Request $request){
+        $validated = $request->validate([
+            'usuario' => 'required',
+            'correo' => 'required',
+            'nombre' => 'required',
+            'rol_id' => 'required'
+        ]);
 
+        $usuario = Usuario::find($request->id);
+        $usuario->usuario = $request->usuario;
+        $usuario->correo = $request->correo;
+        $usuario->nombre = $request->nombre;
+        $usuario->telefono = $request->telefono;
+        $usuario->rol_id = $request->rol_id;
+        $usuario->save();
+
+        return redirect('usuario');
     }
 
 }

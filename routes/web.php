@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\TipoAulaController;
 
 
 
@@ -26,4 +27,5 @@ Route::post('/authenticate', [LoginController::class, 'authenticate']);
 Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::resource('usuario', UsuarioController::class);
+Route::resource('tipoaula', TipoAulaController::class);
 

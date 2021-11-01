@@ -51,8 +51,8 @@
                 <a href="index.html"><i class="fa fa-cog"></i> <span class="nav-label">Configuracion</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li><a href="{{ url('/usuario')}}">Usuarios</a></li>
+                    <li><a href="{{ url('/tipoaula')}}">Tipo Aulas</a></li>
                     <li><a href="{{ url('/usuario')}}">Horarios aula</a></li>
-                    <li><a href="{{ url('/usuario')}}">Tipo Aulas</a></li>
                 </ul>
             </li>
 
