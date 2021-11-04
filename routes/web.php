@@ -17,6 +17,8 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\TipoAulaController;
+use App\Http\Controllers\AulaController;
+use App\Http\Controllers\DocenteController;
 
 
 
@@ -28,4 +30,5 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::resource('usuario', UsuarioController::class);
 Route::resource('tipoaula', TipoAulaController::class);
-
+Route::resource('aula', AulaController::class);
+Route::resource('docente', DocenteController::class);

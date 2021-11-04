@@ -17,33 +17,24 @@
                 <div class="logo-element"> TOO </div>
             </li>
 
+            <li><a href="#"><i class="fa fa-calendar"></i> <span class="nav-label">Calendario</span>  </a></li>
+            <li><a href="#"><i class="fa fa-book"></i> <span class="nav-label">Reservar</span>  </a></li>  
             <li>
-                <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">Programación Calendario</span>  </a>
+                <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Recursos</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
-                    <li><a href="calendar.html">Calendario</a></li>
-                </ul>
-            </li>
-            
-            <li>
-                <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Listados</span><span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level collapse">
-                    <li><a href="listaAulas.html">Aulas</a></li>
-                    <li><a href="listaDocentes.html">Docentes</a></li>
-                    <li><a href="listaCarreras.html">Carreras</a></li>
-                    <li><a href="listaFacultades.html">Facultades</a></li>
-                    <li><a href="listaMaterias.html">Materias</a></li>
+                    <li><a href="{{ url('/aula') }}">Aulas</a></li>
+                    <li><a href="{{ url('/docente') }}">Docentes</a></li>
+                    <li><a href="{{ url('/carrera') }}">Carreras</a></li>
+                    <li><a href="{{ url('/facultad') }}">Facultades</a></li>
+                    <li><a href="{{ url('/materia') }}">Materias</a></li>
                 </ul>
             </li>
 
-
             <li>
-                <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Nuevo Registro</span><span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level">
-                    <li><a href="{{ url('/usuario')}}">Aulas</a></li>
-                    <li><a href="formularioDocentes.html">Docentes</a></li>
-                    <li><a href="formularioCarreras.html">Carreras</a></li>
-                    <li><a href="formularioFacultades.html">Facultades</a></li>
-                    <li><a href="formularioMaterias.html">Materias</a></li>
+                <a href="index.html"><i class="fa fa-clipboard"></i> <span class="nav-label">Reportes</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="{{ url('/usuario')}}">Informacion de aula</a></li>
+                    <li><a href="{{ url('/tipoaula')}}">Informacion para docente</a></li>
                 </ul>
             </li>
 
@@ -52,7 +43,6 @@
                 <ul class="nav nav-second-level collapse">
                     <li><a href="{{ url('/usuario')}}">Usuarios</a></li>
                     <li><a href="{{ url('/tipoaula')}}">Tipo Aulas</a></li>
-                    <li><a href="{{ url('/usuario')}}">Horarios aula</a></li>
                 </ul>
             </li>
 
