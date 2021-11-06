@@ -18,6 +18,7 @@
             </li>
 
             <li><a href="{{ url('/') }}"><i class="fa fa-calendar"></i> <span class="nav-label">Calendario</span>  </a></li>
+            @auth("web")
             <li><a href="{{ url('/reservar') }}"><i class="fa fa-book"></i> <span class="nav-label">Reservar</span>  </a></li>  
             <li>
                 <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Recursos</span><span class="fa arrow"></span></a>
@@ -30,7 +31,7 @@
                     <li><a href="{{ url('/grupo') }}">Grupos</a></li></li>
                 </ul>
             </li>
-
+            @endAuth
             <li>
                 <a href="index.html"><i class="fa fa-clipboard"></i> <span class="nav-label">Reportes</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
@@ -38,7 +39,7 @@
                     <li><a href="{{ url('/tipoaula')}}">Informacion para docente</a></li>
                 </ul>
             </li>
-
+            @auth("web")
             <li>
                 <a href="index.html"><i class="fa fa-cog"></i> <span class="nav-label">Configuracion</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
@@ -46,7 +47,7 @@
                     <li><a href="{{ url('/tipoaula')}}">Tipo Aulas</a></li>
                 </ul>
             </li>
-
+            @endAuth
            
         </ul>
 

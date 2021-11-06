@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\CalendarioController;
+use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\TipoAulaController;
 use App\Http\Controllers\AulaController;
@@ -26,15 +26,19 @@ use App\Http\Controllers\MateriaController;
 use App\Http\Controllers\GrupoController;
 
 
+
+
 Route::get('/', [LandingController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'login']);
 Route::post('/authenticate', [LoginController::class, 'authenticate']);
 Route::get('/logout', [LoginController::class, 'logout']);
 
-Route::get('/calendario/materia/{id}', [CalendarioController::class, 'getMateria']);
-Route::get('/calendario/aula/{id}', [CalendarioController::class, 'getAula']);
-Route::get('/calendario/docente/{id}', [CalendarioController::class, 'getDocente'] );
+Route::get('/reservar', [ReservaController::class, 'index']);
+Route::post('/reservar', [ReservaController::class, 'store']);
+Route::get('/calendario/materia/{id}', [ReservaController::class, 'getMateria']);
+Route::get('/calendario/aula/{id}', [ReservaController::class, 'getAula']);
+Route::get('/calendario/docente/{id}', [ReservaController::class, 'getDocente'] );
 
 Route::resource('usuario', UsuarioController::class);
 Route::resource('tipoaula', TipoAulaController::class);
