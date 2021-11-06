@@ -1,6 +1,6 @@
 @extends('layout.layout')
 
-@section('title', 'Docentes')
+@section('title', 'Carreras')
 
 @section('cssExtra')
 <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
@@ -23,24 +23,24 @@
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
-                    <th>nombre</th>
-                    <th>email</th>
-                    <th>telefono</th>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Facultad</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($docentes as $docente)
+                @foreach ($carreras as $carrera)
                     <tr>
-                        <td>{{ $docente->nombre}}</td>
-                        <td>{{ $docente->email}}</td>
-                        <td>{{ $docente->telefono}}</td>
-                        <td><a class="btn btn-outline-primary" href="{{ url('docente/'. $docente->id . '/edit' )}}">Editar</a></td>
+                        <td>{{ $carrera->codigo}}</td>
+                        <td>{{ $carrera->nombre }}</td>
+                        <td>{{ $carrera->facultad }}</td>
+                        <td><a class="btn btn-outline-primary" href="{{ url('carrera/'. $carrera->id . '/edit' )}}">Editar</a></td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
 
-        <a href="{{ url('docente/create') }}" class="btn btn-outline-secondary" >Nuevo</a>
+        <a href="{{ url('carrera/create') }}" class="btn btn-outline-secondary" >Nuevo</a>
     </div>
 @endsection

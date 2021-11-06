@@ -2,9 +2,25 @@
 
 @section('title', 'Aulas')
 
+@section('cssExtra')
+<link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+@show
+
+@section('scriptExtra')
+<script src="js/plugins/dataTables/datatables.min.js"></script>
+<script>
+    $(document).ready(function(){
+            $('.table').DataTable({
+                pageLength: 25,
+                responsive: true
+            });
+        });
+</script>
+@show
+
 @section('main')
     <div class="ibox-content">
-        <table class="table">
+        <table class="table table-bordered table-hover">
             <thead>
                 <tr>
                     <th>nombre</th>

@@ -17,16 +17,17 @@
                 <div class="logo-element"> TOO </div>
             </li>
 
-            <li><a href="#"><i class="fa fa-calendar"></i> <span class="nav-label">Calendario</span>  </a></li>
-            <li><a href="#"><i class="fa fa-book"></i> <span class="nav-label">Reservar</span>  </a></li>  
+            <li><a href="{{ url('/') }}"><i class="fa fa-calendar"></i> <span class="nav-label">Calendario</span>  </a></li>
+            <li><a href="{{ url('/reservar') }}"><i class="fa fa-book"></i> <span class="nav-label">Reservar</span>  </a></li>  
             <li>
                 <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Recursos</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li><a href="{{ url('/aula') }}">Aulas</a></li>
-                    <li><a href="{{ url('/docente') }}">Docentes</a></li>
                     <li><a href="{{ url('/carrera') }}">Carreras</a></li>
                     <li><a href="{{ url('/facultad') }}">Facultades</a></li>
                     <li><a href="{{ url('/materia') }}">Materias</a></li>
+                    <li><a href="{{ url('/docente') }}">Docentes</a></li>
+                    <li><a href="{{ url('/grupo') }}">Grupos</a></li></li>
                 </ul>
             </li>
 
