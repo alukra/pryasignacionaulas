@@ -29,7 +29,7 @@
                 <label class="form-label">Ciclo</label>
                 <input class="form-control" name="ciclo" type="number" step="1" min="1" >
             </div>
-            <select class="form-control m-b" name="facultad_id">
+            <select class="form-control m-b" name="carrera_id">
                 @foreach ($carreras as $carrera)
                     <option value="{{ $carrera->id }}"> {{ $carrera->nombre}}</option>
                 @endforeach

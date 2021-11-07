@@ -31,7 +31,7 @@
                 <label class="form-label">Ciclo</label>
                 <input class="form-control" name="ciclo" type="number" step="1" min="1" value="{{ $materia->ciclo }}">
             </div>
-            <select class="form-control m-b" name="facultad_id">
+            <select class="form-control m-b" name="carrera_id">
                 @foreach ($carreras as $carrera)
                     <option value="{{ $carrera->id }}" @if($carrera->id == $materia->carrera_id) selected @endif> {{ $carrera->nombre}}</option>
                 @endforeach
