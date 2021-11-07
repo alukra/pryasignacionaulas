@@ -5,7 +5,7 @@
         </div>
         <ul class="nav navbar-top-links navbar-right">
             @auth("web")
-            <li><a href="{{ url('/login') }}"> <i class="fa fa-sign-out"></i> Salir</a></li>
+            <li><a href="{{ url('/logout') }}"> <i class="fa fa-sign-out"></i> Salir</a></li>
             @endauth
             @guest
             <li><a href="{{ url('/login') }}" > <i class="fa fa-sign-in"></i>Iniciar sesión</a></li>    
