@@ -33,7 +33,7 @@ class MateriaController extends Controller
         $materia->nombre = $request->nombre;
         $materia->codigo = $request->codigo;
         $materia->ciclo = $request->ciclo;
-        $materia->carrera_id = $request->materia_id;
+        $materia->carrera_id = $request->carrera_id;
         $materia->save();
 
         return redirect('materia');
@@ -58,7 +58,7 @@ class MateriaController extends Controller
         $materia->nombre = $request->nombre;
         $materia->codigo = $request->codigo;
         $materia->ciclo = $request->ciclo;
-        $materia->carrera_id = $request->materia_id;
+        $materia->carrera_id = $request->carrera_id;
         $materia->save();
 
         return redirect('materia');
